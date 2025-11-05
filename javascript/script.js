@@ -16,9 +16,8 @@ Rendete il tutto un po più bello e creativo  */
 
 /* raccolgo elementi necessari */
 const imgElem = document.querySelector(".img");
-console.log(imgElem);
+
 const btnElem = document.querySelector(".btn");
-console.log(btnElem);
 
 /* uso arrow function */
 
@@ -41,12 +40,10 @@ btnElem.addEventListener("click", () => {
   if (valore) {
     imgElem.src = "./img/yellow_lamp.png";
     btnElem.innerHTML = "Spegni";
-    btnElem.classList.add("btn-danger");
   } else {
     imgElem.src = "./img/white_lamp.png";
     btnElem.innerHTML = "Accendi";
-    btnElem.classList.remove("btn-danger");
   }
-
+  btnElem.classList.toggle("btn-danger");
   valore = !valore;
 });
