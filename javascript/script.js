@@ -39,10 +39,10 @@ let btnValore = true;
 btnElem.addEventListener("click", () => {
   if (btnValore) {
     imgElem.src = "./img/yellow_lamp.png";
-    btnElem.innerHTML = "Spegni";
+    btnElem.innerHTML = `<i class="bi bi-power"></i> Spegni`;
   } else {
     imgElem.src = "./img/white_lamp.png";
-    btnElem.innerHTML = "Accendi";
+    btnElem.innerHTML = `<i class="bi bi-power"></i> Accendi`;
   }
   btnElem.classList.toggle("btn-danger");
   btnValore = !btnValore;
