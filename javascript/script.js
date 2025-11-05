@@ -34,10 +34,10 @@ const btnElem = document.querySelector(".btn");
 }); */
 
 /* ALTRA VERSIONE */
-let valore = true;
+let btnValore = true;
 
 btnElem.addEventListener("click", () => {
-  if (valore) {
+  if (btnValore) {
     imgElem.src = "./img/yellow_lamp.png";
     btnElem.innerHTML = "Spegni";
   } else {
@@ -45,5 +45,15 @@ btnElem.addEventListener("click", () => {
     btnElem.innerHTML = "Accendi";
   }
   btnElem.classList.toggle("btn-danger");
-  valore = !valore;
+  btnValore = !btnValore;
+});
+
+let btnImg = true;
+
+imgElem.addEventListener("click", () => {
+  const ternario = btnImg
+    ? (imgElem.src = "./img/yellow_lamp.png")
+    : (imgElem.src = "./img/white_lamp.png");
+
+  btnImg = !btnImg;
 });
